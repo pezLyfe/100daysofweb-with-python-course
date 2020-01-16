@@ -10,3 +10,8 @@
 1/9/2020 Day 6 - Recreated Google homepage
 1/10/2020 Day 7 - Made a registration form for Gaggle, finished the Gaggle homepage
 1/11/2020 Day 8 - Started the API videos
+1/12/2020 Day 9 - Watched APIstar videos
+1/13/2020 - Missed
+1/14/2020 - Missed
+1/15/2020 Day 10 - Finished API star videos
+1/16/2020 Day 11 - Started working with API star
