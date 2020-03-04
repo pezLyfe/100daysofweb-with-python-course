@@ -1,0 +1,40 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <h1>Pokemon Color List</h1>
+    <h3>Enter a color to see which Pokemon are a match</h3>
+    <div>
+        <form class="mui-form" method="POST" action="/pokemon">
+        <label for="pokecolor">Pokemon Color</label>
+        <input type="text" class="form-control" id="pokecolor" name="pokecolor"
+    placeholder="Eg: blue"><br>
+            <button type="submit" class="mui-btn mui-btn--raised" value="Submit">Submit</button>
+        </form>
+    </div>
+    <br>
+    <br>
+    <div>
+        {% if invalid_input %}
+            {{ invalid_input }}
+        {% endif %}
+    </div>
+    <div>
+        {% if pokemon %}
+        <table class="mui-table mui-table--bordered">
+            <thead>
+            <tr>
+                <th>Pokemon</th>
+            </tr>
+            </thead>
+            <tbody>
+            {% for i in pokemon%}
+                <tr>
+                <td>{{ i }}</td>
+                </tr>
+            {% endfor %}
+            </tbody>
+        </table>
+        {% endif %}
+    </div>
+
+{% endblock %}

@@ -1,0 +1,79 @@
+/*********** LAYOUT DEMO ****************/
+body {
+    font-size: 24px;
+    padding: 0;
+}
+
+.topnav-container {
+    background-color: #222222;
+    display: inline-block;
+    width: 100%;
+    padding-top: 10px;
+    align-items: top;
+}
+
+.topnav-container .topnav-left p{
+    display: inline-block;
+}
+
+.topnav-left img{
+    border-radius: 75%;
+    height: 40px;
+    margin-left: 120px;
+}
+
+.topnav-container .topnav-right ul{
+    float: right;
+    margin-right: 72px;
+}
+
+.topnav-right li{
+    display: inline-block;
+    padding-right: 5px;
+    font-size: 12pt;
+    font-weight: bold;
+}
+
+.topnav-right a,
+.topnav-right a:visited{
+    color: grey;
+    text-decoration: none;
+}
+
+.topnav-right a:hover {
+    color: white;
+    text-decoration: none
+}
+
+.topnav-right a:active {
+    color:yellow;
+    text-decoration: none
+}
+
+/* color background of nav to #222*/
+.custom-nav {
+    background-color: #222222;
+}
+
+/* style page hyperlinks bold */
+.page-content a {
+    font-weight: bold;
+}
+
+/* color list hyperlinks #aaa even when visited */
+/* color list hyperlinks white, no underline when hovered */
+.custom-nav a,
+.custom-nav a:visited {
+    color: #aaa;
+    text-decoration: none;
+}
+
+/* color list hyperlinks yellow, no underline when clicked */
+.custom-nav a:active {
+    color: yellow;
+}
+
+.page-content {
+    font-size: 18px;
+    padding: 10px;
+}

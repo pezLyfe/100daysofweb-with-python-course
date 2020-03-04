@@ -28,24 +28,23 @@ class Car(types.Type):
     year = validators.Integer(minimum=1900, maximum=2050)
     vin = validators.String(max_length=50, default='')
 
-
 # API methods
 
 def list_cars() -> List[Car]:
-    return [Car(car[1]) for car in sorted(cars.items())]
+    return [Stock(stock[1]) for stock in sorted(stocks.items())]
 
 
-def create_car(car: Car) -> JSONResponse:
-    car_id = max(cars.keys())+1
-    car.id = car_id
-    cars[car_id] = car
-    return JSONResponse(Car(car), status_code=201)
+def create_stock(car: Car) -> JSONResponse:
+    stock_id = max(stocks.keys())+1
+    stock.id = stock_id
+    stocks[stock_id] = stock
+    return JSONResponse(Stock(stock), status_code=201)
 
 
-def get_car(car_id: int) -> JSONResponse:
-    car = cars.get(car_id)
-    if not car:
-        error = {'error': CAR_NOT_FOUND}
+def get_stock(stock_id: int) -> JSONResponse:
+    stock = stocks.get(stock_id)
+    if not stock:
+        error = {'error': STOCK_NOT_FOUND}
         return JSONResponse(error, status_code=404)
 
     return JSONResponse(Car(car), status_code=200)
